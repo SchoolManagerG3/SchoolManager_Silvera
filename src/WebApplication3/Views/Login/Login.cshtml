@@ -1,0 +1,26 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = " Page";
+}
+
+<h1>Admin</h1>
+
+<form asp-action="Login" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Username" class="control-label" for="username"></label>
+        <div class="controls">
+            <input class="form-control" asp-for="Username" id="username" />
+        </div>
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label" for="password"></label>
+        <div class="controls">
+            <input class="form-control" asp-for="Password" type="password" id="password" />
+        </div>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">logga in</button>
+    </div>
+</form>
